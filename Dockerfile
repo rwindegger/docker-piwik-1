@@ -1,8 +1,10 @@
-FROM php:5.6-fpm
+FROM php:fpm
 
-MAINTAINER pierre@piwik.org
+MAINTAINER rene@windegger.wtf
 
 RUN apt-get update && apt-get install -y \
+      mysql-client \
+      libmysqlclient-dev \
       libjpeg-dev \
       libfreetype6-dev \
       libgeoip-dev \
