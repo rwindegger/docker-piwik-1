@@ -4,11 +4,11 @@ MAINTAINER pierre@piwik.org
 
 RUN apt-get update && apt-get install -y \
       mysql-client \
-      libmysqlclient-dev \
+      libmariadbclient-dev-compat \
       libjpeg-dev \
       libfreetype6-dev \
       libgeoip-dev \
-      libpng12-dev \
+      libpng-dev \
       libldap2-dev \
       zip \
  && rm -rf /var/lib/apt/lists/*
