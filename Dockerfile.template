@@ -17,7 +17,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --w
 	&& docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
  	&& docker-php-ext-install -j$(nproc) gd mbstring mysqli pdo_mysql zip ldap opcache
 
-RUN pecl install APCu geoip redis \
+RUN pecl install APCu geoip-1.1.1 redis \
   && rm -rf /tmp/pear
 
 RUN docker-php-ext-enable redis
