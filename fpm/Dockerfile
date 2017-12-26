@@ -1,6 +1,6 @@
 FROM php:fpm
 
-MAINTAINER rene@windegger.wtf
+MAINTAINER pierre@piwik.org
 
 RUN apt-get update && apt-get install -y \
       mysql-client \
