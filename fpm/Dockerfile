@@ -3,6 +3,7 @@ FROM php:fpm
 MAINTAINER pierre@piwik.org
 
 RUN apt-get update && apt-get install -y \
+	  gnupg \
       mysql-client \
       libmariadbclient-dev-compat \
       libjpeg-dev \
