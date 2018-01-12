@@ -15,8 +15,8 @@ RUN curl -fsSL -o piwik.tar.gz \
   || gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEYS" \
   || gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEYS" ) \
  && gpg --batch --verify piwik.tar.gz.asc piwik.tar.gz \
- && rm -r "$GNUPGHOME" piwik.tar.gz.asc \
  && tar -xzf piwik.tar.gz -C /usr/src/ \
+ && rm -r "$GNUPGHOME" piwik.tar.gz.asc \
  && rm piwik.tar.gz
 
 COPY docker-entrypoint.sh /entrypoint.sh
